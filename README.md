@@ -2,6 +2,10 @@
 
 OptiFlow is an interactive web application designed for Petroleum Engineers to perform Nodal Analysis in vertical petroleum wells. The software calculates and visualizes Inflow Performance Relationship (IPR) and Tubing Performance Relationship (TPR/VLP) curves, identifies operating points, and allows users to optimize tubing sizes for multiphase flow.
 
+## Benchmarking & Validation
+- **PROSPER Comparison**: The custom software outputs (Vogel IPR and Beggs & Brill VLP) were strictly benchmarked against industry-standard PROSPER software. This validates the core correlation behaviors and operating point intersections while highlighting the analytical differences in commercial flow-regime transition smoothing and static fluid density PVT evaluations.
+- **Rigorous Physics-Based IPR vs. Vogel**: Included in the repository is an Excel analysis comparing the empirical Vogel IPR method against a rigorous mathematical model. Rather than relying on standard empirical assumptions, this physics-based approach calculates the flow rate ($q$) for each flowing bottom-hole pressure ($P_{wf}$) by dynamically integrating the $k_{ro}/(\mu_o B_o)$ function with respect to pressure, utilizing granular PVT and relative permeability data across all pressure steps.
+
 ## Features
 - **IPR Models**: Vogel's method for two-phase flow and the Fetkovich method.
 - **Multiphase VLP/TPR**: Uses the rigorous Beggs & Brill multiphase flow correlation. Accounts for flow regime changes, friction, hydrostatic elevation, and density changes.
